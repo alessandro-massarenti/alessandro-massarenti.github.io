@@ -137,7 +137,23 @@ a {
 }
 
 .hero-content {
-    max-width: 520px;
+    max-width: 700px;
+}
+
+.hero-name-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--line);
+    box-shadow: var(--shadow-section);
+    flex-shrink: 0;
 }
 
 .hero-eyebrow {
@@ -147,6 +163,17 @@ a {
     text-transform: uppercase;
     color: var(--accent);
     margin-bottom: 14px;
+}
+
+.location-link {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.location-link:hover {
+    border-bottom-color: var(--accent);
 }
 
 .hero-name {
@@ -175,7 +202,7 @@ a {
 .hero-contact {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     align-items: flex-start;
     padding-bottom: 4px;
 }
@@ -184,28 +211,6 @@ a {
     .hero-contact {
         align-items: flex-end;
     }
-}
-
-.profile-image-wrapper {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid var(--line);
-    box-shadow: var(--shadow-float);
-    flex-shrink: 0;
-}
-
-.profile-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.contact-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
 
 .contact-item {
@@ -223,11 +228,12 @@ a {
     color: var(--accent);
 }
 
-.contact-item svg {
+.contact-item i {
     width: 16px;
     height: 16px;
     opacity: 0.55;
     flex-shrink: 0;
+    text-align: center;
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -426,11 +432,11 @@ a {
     justify-content: center;
     margin-top: 2px;
     box-shadow: var(--shadow-section);
+    border-radius: 50%;
 }
 
-.edu-icon svg {
-    width: 18px;
-    height: 18px;
+.edu-icon i {
+    font-size: 18px;
     color: white;
 }
 
