@@ -19,14 +19,51 @@
 
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
+<!-- Mobile Menu Toggle -->
+<button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<!-- Sidebar Navigation -->
+<nav class="sidebar">
+    <div class="sidebar-inner">
+        <a href="#experience" class="nav-item" onclick="closeMobileMenu()">
+            <span class="nav-number">01</span>
+            <span class="nav-label">Experience</span>
+        </a>
+        <a href="#skills" class="nav-item" onclick="closeMobileMenu()">
+            <span class="nav-number">02</span>
+            <span class="nav-label">Skills</span>
+        </a>
+        <a href="#education" class="nav-item" onclick="closeMobileMenu()">
+            <span class="nav-number">03</span>
+            <span class="nav-label">Education</span>
+        </a>
+        <a href="#languages" class="nav-item" onclick="closeMobileMenu()">
+            <span class="nav-number">04</span>
+            <span class="nav-label">Languages</span>
+        </a>
+        <a href="#projects" class="nav-item" onclick="closeMobileMenu()">
+            <span class="nav-number">05</span>
+            <span class="nav-label">Projects</span>
+        </a>
+        <a href="#interests" class="nav-item" onclick="closeMobileMenu()">
+            <span class="nav-number">06</span>
+            <span class="nav-label">Interests</span>
+        </a>
+    </div>
+</nav>
+
 <div class="page">
 
     <!-- HERO -->
-    <header class="hero">
+    <header class="hero" id="hero">
         <div class="hero-content">
             <p class="hero-eyebrow animate-fade-up">Backend Developer · <a href="https://www.google.com/maps/search/Noale,+Italy" target="_blank" class="location-link">Noale, Italy</a></p>
             <div class="hero-name-wrapper animate-fade-up-delay-1">
-                <img src="profile.jpg" alt="Alessandro Massarenti" class="hero-image" onerror="this.style.display='none'" width="160" height="160" loading="eager" fetchpriority="high">
+                <img src="profile.jpg" alt="Alessandro Massarenti" class="hero-image" onerror="this.style.display='none'" loading="eager" fetchpriority="high">
                 <h1 class="hero-name">Alessandro<br><em>Massarenti</em></h1>
             </div>
             <p class="hero-subtitle animate-fade-up-delay-2">
@@ -53,7 +90,7 @@
     <div class="sections">
 
         <!-- Experience -->
-        <section class="section full-width">
+        <section class="section full-width" id="experience">
             <div class="section-header">
                 <span class="section-index">01</span>
                 <span class="section-label">Experience</span>
@@ -74,7 +111,7 @@
                 <div class="exp-date">Mar 2023<br>Apr 2025</div>
                 <div>
                     <div class="exp-title">NOC & Software Developer</div>
-                    <div class="exp-company">VoipTel Italia · Noale</div>
+                    <div class="exp-company">VoipTel Italia · Noale, Paradiso(Lugano - CH)</div>
                     <div class="exp-desc">
                         Half NOC, half dev, all the time. Monitored ISP infrastructure and VoIP services, built automation tools in Python/Django, and wrote PostgreSQL queries. When things broke, I fixed them. When they didn't break, I made them faster.
                     </div>
@@ -127,7 +164,7 @@
         </section>
 
         <!-- Skills -->
-        <section class="section left skills-section">
+        <section class="section left skills-section" id="skills">
             <div class="section-header">
                 <span class="section-index">02</span>
                 <span class="section-label">Skills</span>
@@ -210,7 +247,7 @@
         </section>
 
         <!-- Education -->
-        <section class="section right">
+        <section class="section right" id="education">
             <div class="section-header">
                 <span class="section-index">03</span>
                 <span class="section-label">Education</span>
@@ -240,7 +277,7 @@
         </section>
 
         <!-- Languages -->
-        <section class="section full-width">
+        <section class="section full-width" id="languages">
             <div class="section-header">
                 <span class="section-index">04</span>
                 <span class="section-label">Languages</span>
@@ -264,7 +301,7 @@
         </section>
 
         <!-- Projects -->
-        <section class="section full-width">
+        <section class="section full-width" id="projects">
             <div class="section-header">
                 <span class="section-index">05</span>
                 <span class="section-label">Projects</span>
@@ -272,19 +309,32 @@
 
             <div class="projects-grid-full">
                 <div class="project-card">
-                    <div class="project-num">PRJ — 001</div>
-                    <div class="project-title">Gestionale Servizi Portuali</div>
-                    <div class="project-desc">Database management system for port services, developed for the Database course at University of Padua. Includes C/C++ application, SQL queries, and database design.</div>
+                    <div class="project-num">PRJ — 004</div>
+                    <div class="project-title">Carpooling Optimization with ILP</div>
+                    <div class="project-desc">Python implementation using Google OR-Tools to solve carpooling optimization via Integer Linear Programming. Minimizes travel time while handling meeting points, pickup sequences, capacity and time constraints.</div>
                     <div class="project-tags">
-                        <span class="project-tag">C</span>
+                        <span class="project-tag">Python</span>
                         <span class="project-tag-sep">·</span>
-                        <span class="project-tag">C++</span>
+                        <span class="project-tag">OR-Tools</span>
                         <span class="project-tag-sep">·</span>
-                        <span class="project-tag">SQL</span>
+                        <span class="project-tag">ILP</span>
                         <span class="project-tag-sep">·</span>
-                        <span class="project-tag">Database</span>
+                        <span class="project-tag">Optimization</span>
                     </div>
-                    <a href="https://github.com/alessandro-massarenti/Progetto-basi-di-dati-2022" target="_blank" class="project-link">View project →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-num">PRJ — 003</div>
+                    <div class="project-title">TextProcessor</div>
+                    <div class="project-desc">Python wrapper for text processing with ML model integration. Modular architecture with separate processor, preprocessor, and text utilities for clean separation of concerns.</div>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag-sep">·</span>
+                        <span class="project-tag">ML</span>
+                        <span class="project-tag-sep">·</span>
+                        <span class="project-tag">NLP</span>
+                    </div>
+                    <a href="https://github.com/alessandro-massarenti/TextProcessor" target="_blank" class="project-link">View project →</a>
                 </div>
 
                 <div class="project-card">
@@ -304,38 +354,25 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="project-num">PRJ — 003</div>
-                    <div class="project-title">TextProcessor</div>
-                    <div class="project-desc">Python wrapper for text processing with ML model integration. Modular architecture with separate processor, preprocessor, and text utilities for clean separation of concerns.</div>
+                    <div class="project-num">PRJ — 001</div>
+                    <div class="project-title">Gestionale Servizi Portuali</div>
+                    <div class="project-desc">Database management system for port services, developed for the Database course at University of Padua. Includes C/C++ application, SQL queries, and database design.</div>
                     <div class="project-tags">
-                        <span class="project-tag">Python</span>
+                        <span class="project-tag">C</span>
                         <span class="project-tag-sep">·</span>
-                        <span class="project-tag">ML</span>
+                        <span class="project-tag">C++</span>
                         <span class="project-tag-sep">·</span>
-                        <span class="project-tag">NLP</span>
+                        <span class="project-tag">SQL</span>
+                        <span class="project-tag-sep">·</span>
+                        <span class="project-tag">Database</span>
                     </div>
-                    <a href="https://github.com/alessandro-massarenti/TextProcessor" target="_blank" class="project-link">View project →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-num">PRJ — 004</div>
-                    <div class="project-title">Carpooling Optimization with ILP</div>
-                    <div class="project-desc">Python implementation using Google OR-Tools to solve carpooling optimization via Integer Linear Programming. Minimizes travel time while handling meeting points, pickup sequences, capacity and time constraints.</div>
-                    <div class="project-tags">
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag-sep">·</span>
-                        <span class="project-tag">OR-Tools</span>
-                        <span class="project-tag-sep">·</span>
-                        <span class="project-tag">ILP</span>
-                        <span class="project-tag-sep">·</span>
-                        <span class="project-tag">Optimization</span>
-                    </div>
+                    <a href="https://github.com/alessandro-massarenti/Progetto-basi-di-dati-2022" target="_blank" class="project-link">View project →</a>
                 </div>
             </div>
         </section>
 
         <!-- Interests -->
-        <section class="section full-width">
+        <section class="section full-width" id="interests">
             <div class="section-header">
                 <span class="section-index">06</span>
                 <span class="section-label">Interests</span>
@@ -373,6 +410,8 @@
     </footer>
 
 </div>
+
+<script src="main.js"></script>
 
 </body>
 </html>
